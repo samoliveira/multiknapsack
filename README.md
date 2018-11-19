@@ -13,6 +13,9 @@ mknap1.txt, mknap2.txt, mknapcb1.txt ate mknapcb9.txt
 
 ## Pre-requisites & Installing
 - make sure you have IBM ILOG installed in your machine and the python interface for CPLEX.
+https://www.ibm.com/products/ilog-cplex-optimization-studio
+https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Python_setup.html
+
 - Python3
 - clone this repo
 ## Running
