@@ -1,0 +1,128 @@
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	59218.0 	59390.11904052668 	172.1190405266825 	0.002898109034084134 	0.29065324821284444 	3.5160000000614673
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61472.0 	61585.12113529462 	113.12113529461931 	0.0018368257333797667 	0.1840205870878109 	3.343999999924563
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	62130.0 	62178.17716972333 	48.1771697233271 	0.0007748244145501616 	0.077542523295231 	3.0619999999180436
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	59446.0 	59544.88577951978 	98.8857795197764 	0.001660693075907919 	0.16634555650468702 	3.327999999979511
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	58944.0 	59044.52154364371 	100.52154364370654 	0.0017024702887871556 	0.17053736367349748 	3.2179999999934807
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	60008.0 	60190.332499116565 	182.33249911656458 	0.003029265523981625 	0.30384698559619433 	3.1570000000065193
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	60363.0 	60493.97730699261 	130.97730699260865 	0.002165129700894518 	0.2169827659205282 	3.26500000001397
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61440.0 	61583.96858009996 	143.96858009995776 	0.0023377606773214562 	0.23432386083977463 	3.327999999979511
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61885.0 	61969.493133817006 	84.49313381700631 	0.0013634633679276951 	0.13653249384666102 	3.125
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	58959.0 	58986.588773049705 	27.588773049705196 	0.00046771263813631805 	0.046793149561059635 	3.0459999999729916
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109086.0 	109183.99419282068 	97.99419282068266 	0.0008975142697896116 	0.08983205252798944 	3.2179999999934807
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109841.0 	109903.9035095258 	62.90350952580047 	0.0005723500941924995 	0.05726778664232883 	3.0929999999934807
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	108481.0 	108594.36487705386 	113.36487705385662 	0.0010439296475669225 	0.10450205755280326 	3.312999999965541
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109383.0 	109466.91723701268 	83.9172370126762 	0.0007665990705756562 	0.07671871955667345 	3.109000000054948
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	110718.0 	110803.44950528076 	85.44950528076151 	0.0007711809123477612 	0.07717760913380067 	3.219000000040978
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	110242.0 	110332.58635548946 	90.5863554894604 	0.0008210299285253127 	0.08217045725717995 	3.172000000020489
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109040.0 	109115.2323288635 	75.23232886349433 	0.000689475953611599 	0.06899516586894192 	3.344000000040978
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109016.0 	109113.9926685586 	97.99266855859605 	0.0008980760960352322 	0.08988833616954939 	3.187999999965541
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109931.0 	110065.45648095247 	134.45648095247452 	0.0012216047182409412 	0.12230988615811225 	3.1570000000065193
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	107058.0 	107128.75433238717 	70.75433238716505 	0.0006604607028999552 	0.06608971995289001 	3.25
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149659.0 	149730.89791370806 	71.89791370806051 	0.00048018087589040076 	0.04804115603342296 	3.484000000054948
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	155940.0 	156028.30582651094 	88.305826510943 	0.0005659602983136337 	0.056628079075890056 	3.2339999999385327
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149334.0 	149396.53239713388 	62.532397133880295 	0.000418566590070868 	0.04187418614239239 	3.280999999959022
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	152130.0 	152200.198780878 	70.19878087801044 	0.00046122660443482946 	0.04614394325774693 	3.297000000020489
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	150353.0 	150425.1583221523 	72.1583221523033 	0.00047969583650208416 	0.047992605503251184 	3.218999999924563
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	150045.0 	150060.0038806903 	15.003880690288497 	9.998587433209574e-05 	0.009999587250683787 	1.3599999999860302
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	148607.0 	148621.8493074844 	14.849307484400924 	9.991335428533881e-05 	0.009992333796120583 	0.9529999999795109
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149770.0 	149854.96781038053 	84.9678103805345 	0.0005670002911618439 	0.056732196287997895 	3.109000000054948
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	155075.0 	155128.22469430114 	53.224694301141426 	0.0003431012918895133 	0.034321905078924 	3.077999999979511
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	154668.0 	154740.45772519187 	72.45772519186721 	0.0004682532691001019 	0.04684726329419606 	3.1880000000819564
+
+# 10 minutos
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	59312.0 	59317.92859760011 	5.928597600111971 	9.994613332387723e-05 	0.009995612355192812 	13.0
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61472.0 	61478.14618163843 	6.1461816384326085 	9.997343804534362e-05 	0.009998343373296133 	44.09299999999348
+
+# 5 minutos
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	59312.0 	59317.92859760011 	5.928597600111971 	9.994613332387723e-05 	0.009995612355192812 	12.187999999965541
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61472.0 	61478.14618163843 	6.1461816384326085 	9.997343804534362e-05 	0.009998343373296133 	38.42200000002049
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	62130.0 	62136.203648493836 	6.203648493836226 	9.983951592746849e-05 	0.009984948485170154 	6.125
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	59463.0 	59468.94622343581 	5.946223435807042 	9.998871366353093e-05 	0.009999871240615226 	159.625
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	58951.0 	58956.89402752138 	5.894027521382668 	9.997181192468018e-05 	0.0099981807287114 	46.32799999997951
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	60077.0 	60083.00767797562 	6.007677975620027 	9.998963447068307e-05 	0.00999996333974735 	105.65599999995902
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	60414.0 	60420.04097109728 	6.0409710972817265 	9.998290302668786e-05 	0.009999290060717245 	34.14099999994505
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61472.0 	61478.14713781056 	6.147137810563436 	9.998898953125403e-05 	0.009999898832905104 	62.73400000005495
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	61885.0 	61891.18734796871 	6.1873479687128565 	9.997138904325654e-05 	0.00999813843211254 	15.75
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	58959.0 	58964.89433899361 	5.89433899361029 	9.996353015954362e-05 	0.009997352386591158 	3.9380000000819564
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109109.0 	109119.91045600781 	10.910456007812172 	9.998593256004157e-05 	0.009999593074642937 	33.68700000003446
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109841.0 	109851.98265973851 	10.982659738510847 	9.997689138237161e-05 	0.009998688776058882 	9.062000000034459
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	108508.0 	108518.85070217824 	10.8507021782425 	9.99890996636283e-05 	0.009999909848345274 	81.35900000005495
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109383.0 	109393.93784392183 	10.937843921827152 	9.998583228106075e-05 	0.009999583044739259 	35.26599999994505
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	110720.0 	110731.07198392862 	11.071983928617556 	9.998985587554441e-05 	0.0099999854846618 	148.5
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	110256.0 	110267.02536421071 	11.025364210712723 	9.998786286558536e-05 	0.009999786143804158 	45.26599999994505
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109040.0 	109050.90372270161 	10.903722701608785 	9.998745841974081e-05 	0.009999745691130572 	36.10999999998603
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109042.0 	109052.90418313086 	10.904183130856836 	9.998984632766506e-05 	0.009999984529682898 	81.73400000005495
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	109971.0 	109981.9962823267 	10.996282326697838 	9.99825671328068e-05 	0.009999256464611422 	57.20299999997951
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	107058.0 	107068.70563728655 	10.705637286548153 	9.998848144120954e-05 	0.009999848013738481 	54.28099999995902
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149665.0 	149679.96621778532 	14.966217785316985 	9.998811573448007e-05 	0.009999811435751162 	51.46799999999348
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	155944.0 	155959.59420462002 	15.594204620021628 	9.99887483649254e-05 	0.009999874711448739 	33.68799999996554
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149334.0 	149348.9329397988 	14.932939798804 	9.998691992545626e-05 	0.009999691830932 	48.79700000002049
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	152130.0 	152145.21284120393 	15.21284120393102 	9.998895739039041e-05 	0.00999989561817591 	35.09400000004098
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	150353.0 	150368.03517983062 	15.035179830621928 	9.998920191143555e-05 	0.009999920075171044 	47.28200000000652
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	150045.0 	150060.0038806903 	15.003880690288497 	9.998587433209574e-05 	0.009999587250683787 	3.14000000001397
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	148607.0 	148621.8493074844 	14.849307484400924 	9.991335428533881e-05 	0.009992333796120583 	2.64000000001397
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	149782.0 	149796.97809439898 	14.978094398975372 	9.998929610940807e-05 	0.009999929496852335 	72.46799999999348
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	155075.0 	155090.50665556235 	15.506655562348897 	9.998455673877797e-05 	0.009999455465000088 	15.421999999904074
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time	timelimit(s)
+5 	154668.0 	154683.4664142074 	15.46641420738888 	9.998750717140846e-05 	0.009999750567272397 	37.48399999993853

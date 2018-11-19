@@ -13,8 +13,13 @@ def readfile(filename):
         r = []
         b = []
 
+
         # (1)
-        line = file.readline().split(" ")
+        line = file.readline()
+        if len(line.split(" ")) < 3:
+            line = file.readline().split(" ")
+        else:
+            line =  line.split(" ")
         n_vars = int(line[0])
         m_cons = int(line[1])
         optimal = int(line[2])

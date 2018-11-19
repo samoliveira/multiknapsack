@@ -1,131 +1,162 @@
 #/usr/bin/env python3
-
 import cplex
 import readfile
+import sys
+from cplex.callbacks import MIPInfoCallback
 
-# Create an instance of a linear problem to solve
-problem = cplex.Cplex()
-
-
-# We want to find a maximum of our objective function
-problem.objective.set_sense(problem.objective.sense.maximize)
-
-# The names of our variables
-names = ["x", "y", "z"]
-
-"""
-n_vars m_cons optimal solution value
-[coefficients p(j)](1,n_vars)
-[[the coefficients r(i,j)]](m_cons,n_vars)
-[b]^T(1,m_cons)
+class TimeLimitCallback(MIPInfoCallback):
+    def __call__(self):
+        if not self.aborted and self.has_incumbent():
+            gap = 100.0 * self.get_MIP_relative_gap()
+            timeused = self.get_time() - self.starttime
+            if timeused > self.timelimit:
+                print("Good enough solution at", timeused, "sec., gap =",
+                      gap, "%, quitting.")
+                self.aborted = True
+                self.abort()
 
 
-6 10 3800
- 100 600 1200 2400 500 2000
- 8 12 13 64 22 41
- 8 12 13 75 22 41
- 3 6 4 18 6 4
- 5 10 8 32 6 12
- 5 13 8 42 6 20
- 5 13 8 48 6 20
- 0 0 0 0 8 0
- 3 0 4 0 8 0
- 3 2 4 0 8 4
- 3 2 4 8 8 4
- 80 96 20 36 44 48 10 18 22 24
-"""
+
+def solveCplex(filename):
 
 
-# The obective function. More precisely, the coefficients of the objective
-# function. Note that we are casting to floats.
-objective = [5.0, 2.0, -1.0]
-#objective = [100 600 1200 2400 500 2000]
+    with open(filename, "r") as file:
 
-# Lower bounds. Since these are all zero, we could simply not pass them in as
-# all zeroes is the default.
-lower_bounds = [0.0, 0.0, 0.0]
+        line = file.readline().split(" ")
+        total_instaces = int(line[0])
+        for instance in range(total_instaces):
+            problem = cplex.Cplex()
+            timelim_cb = problem.register_callback(TimeLimitCallback)
 
-# Upper bounds. The default here would be cplex.infinity, or 1e+20.
-upper_bounds = [100, 1000, cplex.infinity]
+            timelim_cb.timelimit = 60*5  #3600 = 1h, 1= 1s
+            timelim_cb.aborted = False
+            problem.objective.set_sense(problem.objective.sense.maximize)
 
-#problem.variables.add(obj = objective,lb = lower_bounds,ub = upper_bounds,names = names)
+            p = []
+            r = []
+            b = []
 
-# Constraints
+            # (1)
+            line = file.readline()
+            if len(line.split(" ")) < 3:
+                line = file.readline().split(" ")
+            else:
+                line =  line.split(" ")
 
-# Constraints are entered in two parts, as a left hand part and a right hand
-# part. Most times, these will be represented as matrices in your problem. In
-# our case, we have "3x + y - z ≤ 75" and "3x + 4y + 4z ≤ 160" which we can
-# write as matrices as follows:
+            n_vars = int(line[0])
+            m_cons = int(line[1])
+            optimal = int(line[2])
 
-# [  3   1  -1 ]   [ x ]   [  75 ]
-# [  3   4   4 ]   [ y ] ≤ [ 160 ]
-#                  [ z ]
+            # (2)
+            line = file.readline().split(" ")
+            while(len(line) < n_vars):
+                line = line + file.readline().split(" ")
+            for el in line:
+                p.append(int(el))
+            assert len(p) == n_vars, "len(p) != n_vars"
+            line = []
 
-# First, we name the constraints
-constraint_names = ["c1", "c2"]
+            # (3)
+            for i in range(m_cons):
+                line = file.readline().split(" ")
+                while(len(line) < n_vars):
+                    line = line + file.readline().split(" ")
+                r_vec = []
+                for el in line:
+                    r_vec.append(int(el))
+                r.append(r_vec)
+                line = []
+            assert len(r)*len(r[0]) == n_vars*m_cons, "matrix [[r]] size aren't right"
 
-# The actual constraints are now added. Each constraint is actually a list
-# consisting of two objects, each of which are themselves lists. The first list
-# represents each of the variables in the constraint, and the second list is the
-# coefficient of the respective variable. Data is entered in this way as the
-# constraints matrix is often sparse.
+            # (4)
+            line = file.readline().split(" ")
+            while(len(line) < m_cons):
+                line = line + file.readline().split(" ")
+            for i in range(m_cons):
+                b.append(int(line[i]))
+            assert len(b) == m_cons, "Vector [b]  size aren't right"
+            line = []
 
-# The first constraint is entered by referring to each variable by its name
-# (which we defined earlier). This then represents "3x + y - z"
-first_constraint = [["x", "y", "z"], [3.0, 1.0, -1.0]]
-# In this second constraint, we refer to the variables by their indices. Since
-# "x" was the first variable we added, "y" the second and "z" the third, this
-# then represents 3x + 4y + 4z
-second_constraint = [[0, 1, 2], [3.0, 4.0, 4.0]]
-constraints = [ first_constraint, second_constraint ]
+            names = []
+            lower_bounds = []
+            upper_bounds = []
+            for i in range(n_vars):
+                names.append("x"+str(i))
+                lower_bounds.append(0)
+                upper_bounds.append(1)
 
-# So far we haven't added a right hand side, so we do that now. Note that the
-# first entry in this list corresponds to the first constraint, and so-on.
-rhs = [75.0, 160.0]
+            constraint_names = []
+            constraint_senses = []
+            constraints = []
+            rhs = b
 
-# We need to enter the senses of the constraints. That is, we need to tell Cplex
-# whether each constrains should be treated as an upper-limit (≤, denoted "L"
-# for less-than), a lower limit (≥, denoted "G" for greater than) or an equality
-# (=, denoted "E" for equality)
-constraint_senses = [ "L", "L" ]
+            vars_index = [j for j in range(n_vars)]
 
-# Note that we can actually set senses as a string. That is, we could also use
-#     constraint_senses = "LL"
-# to pass in our constraints
+            for i in range(m_cons):
+                if i == 0:
+                    constraints.append([names,r[0]])
+                else:
+                    constraints.append([vars_index,r[i]])
+                constraint_names.append("c"+str(i))
+                constraint_senses.append("L") # <= less than
 
-objective, lower_bounds, upper_bounds, names, constraints, constraint_senses, rhs, constraint_names = readfile.readfile("teste1.txt")
+            objective = p
 
-print(objective)
-print(lower_bounds)
-print(upper_bounds)
-print(names)
-
-print(constraints)
-print(constraint_senses)
-print(rhs)
-print(constraint_names)
-
-problem.variables.add(obj = objective,
-                      lb = lower_bounds,
-                      ub = upper_bounds,
-                      names = names)
-
-for name in names:
-    problem.variables.set_types(name, problem.variables.type.binary)
-
-print("done")
-# And add the constraints
-problem.linear_constraints.add(lin_expr = constraints,
-                               senses = constraint_senses,
-                               rhs = rhs,
-                               names = constraint_names)
+            #objective, lower_bounds, upper_bounds, names, constraints, constraint_senses, rhs, constraint_names = readfile.readfile(filename)
 
 
-print("Done")
 
-problem.set_problem_type(problem.problem_type.MILP)
-# Solve the problem
-problem.solve()
+            problem.variables.add(obj = objective,
+                                  lb = lower_bounds,
+                                  ub = upper_bounds,
+                                  names = names)
 
-# And print the solutions
-print(problem.solution.get_values())
+            for name in names:
+                problem.variables.set_types(name, problem.variables.type.binary)
+
+
+            # And add the constraints
+            problem.linear_constraints.add(lin_expr = constraints,
+                                           senses = constraint_senses,
+                                           rhs = rhs,
+                                           names = constraint_names)
+
+
+            # set the problem to integer programming
+            problem.set_problem_type(problem.problem_type.MILP)
+
+
+            problem.parameters.workmem.set(2048)
+            #problem.parameters.mip.strategy.file.set(3)
+            #problem.parameters.workdir.set(r'C:\Users\username\folder')
+            timelim_cb.starttime = problem.get_time()
+            start_time = timelim_cb.starttime
+            # Solve the problem
+            problem.solve()
+
+            # And print the solutions
+            print("instance:", instance)
+            print(problem.solution.get_values())
+
+            end_time = problem.get_time()
+
+
+            obj_val = problem.solution.get_objective_value()
+            best_obj_val = problem.solution.MIP.get_best_objective()
+            abs_gap = best_obj_val - obj_val
+            rel_gap = 100 * problem.solution.MIP.get_mip_relative_gap()
+            sol_time = end_time - start_time
+            solfilename = filename.split(".txt")[0]
+            solfilename = solfilename+"_sol"+".txt"
+            with open(solfilename,"a+") as solfile:
+                print("Problema:", instance, file=solfile)
+                print("tamanho","\tobj_val(int)","\tbst_obj_val","\tabs_gap","\totimality_gap","\trel_gap","\tsol_time", file=solfile)
+                print(m_cons,"\t"+str(obj_val),"\t"+str(best_obj_val),"\t"+str(abs_gap),"\t"+str(abs_gap/best_obj_val),"\t"+str(rel_gap),"\t"+str(sol_time), file=solfile)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        solveCplex("teste1.txt")
+    elif len(sys.argv) == 2:
+        solveCplex(sys.argv[1])
+    else:
+        print("you dammed brain type just ::::python solver.py teste1.txt::::")

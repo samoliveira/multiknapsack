@@ -1,0 +1,6 @@
+Problema: 0
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time
+10 	59187.0 	59322.63550783216 	135.6355078321576 	0.0022864039446502697 	0.22916435675428282 	617.375
+Problema: 1
+tamanho 	obj_val(int) 	bst_obj_val 	abs_gap 	otimality_gap 	rel_gap 	sol_time
+10 	58781.0 	58852.67828991709 	71.67828991708666 	0.0012179274078910852 	0.12194125638741521 	612.3439999999246
